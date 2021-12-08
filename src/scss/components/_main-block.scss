@@ -153,28 +153,72 @@
 		transform: translate(-50%, -50%);
 
 		&:nth-child(1) {
-			animation: 10s infinite 0s ripple;
+			animation: 10s infinite 0s ripple-xl;
 		}
 
 		&:nth-child(2) {
-			animation: 10s infinite 2s ripple;
+			animation: 10s infinite 2s ripple-xl;
 		}
 
 		&:nth-child(3) {
-			animation: 10s infinite 4s ripple;
+			animation: 10s infinite 4s ripple-xl;
 		}
 
 		&:nth-child(4) {
-			animation: 10s infinite 6s ripple;
+			animation: 10s infinite 6s ripple-xl;
 		}
 
 		&:nth-child(5) {
-			animation: 10s infinite 8s ripple;
+			animation: 10s infinite 8s ripple-xl;
+		}
+
+		@include md {
+			&:nth-child(1) {
+				animation: 10s infinite 0s ripple-md;
+			}
+
+			&:nth-child(2) {
+				animation: 10s infinite 2s ripple-md;
+			}
+
+			&:nth-child(3) {
+				animation: 10s infinite 4s ripple-md;
+			}
+
+			&:nth-child(4) {
+				animation: 10s infinite 6s ripple-md;
+			}
+
+			&:nth-child(5) {
+				animation: 10s infinite 8s ripple-md;
+			}
+		}
+
+		@include xs {
+			&:nth-child(1) {
+				animation: 10s infinite 0s ripple-xs;
+			}
+
+			&:nth-child(2) {
+				animation: 10s infinite 2s ripple-xs;
+			}
+
+			&:nth-child(3) {
+				animation: 10s infinite 4s ripple-xs;
+			}
+
+			&:nth-child(4) {
+				animation: 10s infinite 6s ripple-xs;
+			}
+
+			&:nth-child(5) {
+				animation: 10s infinite 8s ripple-xs;
+			}
 		}
 	}
 }
 
-@keyframes ripple {
+@keyframes ripple-xl {
 	0% {
 		opacity: 1;
 	}
@@ -182,6 +226,30 @@
 	100% {
 		width: 784px;
 		height: 784px;
+		opacity: 0;
+	}
+}
+
+@keyframes ripple-md {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		width: 550px;
+		height: 550px;
+		opacity: 0;
+	}
+}
+
+@keyframes ripple-xs {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		width: 330px;
+		height: 330px;
 		opacity: 0;
 	}
 }
