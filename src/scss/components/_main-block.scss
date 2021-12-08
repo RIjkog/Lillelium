@@ -99,6 +99,11 @@
 		z-index: -1;
 		max-width: 72%;
 
+		img {
+			z-index: -1;
+			display: block;
+		}
+
 		@media (max-width: (1100px)) {
 			top: -30px;
 			max-width: 62%;
