@@ -1,0 +1,28 @@
+.button {
+	@include btn-reset;
+	@include flex-center;
+	@include font-button;
+
+	border-radius: 5px;
+	padding: 22px;
+	min-width: 62px;
+	transition: color 0.3s, background-color 0.3s;
+
+	&_primary {
+		color: $color-white;
+		background-color: $color-secondary;
+
+		&:hover {
+			background-color: $color-hover-button;
+		}
+	}
+
+	&_white {
+		color: $color-text-secondary;
+		background-color: $color-white;
+
+		&:hover {
+			color: $color-text-primary;
+		}
+	}
+}

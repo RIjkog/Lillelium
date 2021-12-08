@@ -1,0 +1,91 @@
+@import "vars";
+
+html,
+body {
+	min-height: 100%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	--font-range: $min-vw $max-vw;
+
+	@include font-body-1;
+
+	position: relative;
+	margin: 0;
+	font-family: $font-primary;
+	color: $color-text-primary;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	display: none;
+}
+
+summary > * {
+	display: inline;
+}
+
+.site-container {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	min-height: 100%;
+
+	&:first-child {
+		min-height: 100%;
+	}
+}
+
+.page {
+	flex: 1 1 auto;
+}
+
+.is-hidden {
+	display: none !important; // stylelint-disable-line declaration-no-important
+}
+
+.container {
+	margin: 0 auto;
+	padding: $container-padding;
+	max-width: $max-vw;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+	outline: none;
+}
+
+.lock {
+	overflow: hidden;
+}
+
+a,
+a > svg {
+	transition: color 0.3s, fill 0.3s;
+}
+
+.visually-hidden {
+	position: absolute;
+	overflow: hidden;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	clip: rect(0 0 0 0);
+}

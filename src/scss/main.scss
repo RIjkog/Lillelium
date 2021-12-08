@@ -1,0 +1,21 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// блоки
+@import "./components/button";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/main-block";
+@import "./components/benefits";
+@import "./components/performance";
+@import "./components/certificates";
+@import "./components/research";
+@import "./components/stages";
+@import "./components/devs";
+@import "./components/callback-section";
+@import "./components/footer";
+@import "./components/modal";

@@ -1,0 +1,97 @@
+.benefits {
+	padding: $section-padding;
+
+	&__title {
+		@include font-h2;
+
+		margin: 0;
+		margin-bottom: 54px;
+
+		span {
+			color: $color-text-secondary;
+		}
+
+		@include md {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__list {
+		@include list-reset;
+
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		margin-bottom: 51px;
+		gap: 54px 20px;
+
+		@include lg {
+			gap: 40px 20px;
+		}
+	}
+
+	&__item {
+		grid-column: 4 span;
+		border-radius: 10px;
+		padding: 0 15px 20px;
+		box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+		background-color: $color-white;
+		transition: 0.3s;
+
+		&:hover {
+			color: $color-white;
+			background-color: $color-red;
+
+			h3::after {
+				background-color: $color-white;
+			}
+		}
+
+		@include md {
+			grid-column: 6 span;
+		}
+
+		@include sm {
+			grid-column: 1 / -1;
+		}
+	}
+
+	&__number {
+		font-weight: 700;
+		font-size: 64px;
+		line-height: 78px;
+		text-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+		color: $color-white;
+	}
+
+	&__headline {
+		margin: 0;
+		margin-bottom: 8px;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 17px;
+		background-size: 0;
+
+		&::after {
+			content: "";
+			display: block;
+			margin-top: 10px;
+			width: 175px;
+			height: 2px;
+			background-color: $color-red;
+			transition: 0.3s;
+		}
+	}
+
+	&__description {
+		margin: 0;
+	}
+
+	&__button {
+		margin: 0 auto;
+		min-width: 275px;
+	}
+
+	@include md {
+		padding: $section-padding-mobile;
+	}
+}

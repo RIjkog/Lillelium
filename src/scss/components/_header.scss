@@ -1,0 +1,325 @@
+.header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	padding-top: 32px;
+	padding-bottom: 23px;
+	width: 100%;
+	background-color: $color-white;
+
+	&__container {
+		display: flex;
+		align-items: center;
+
+		@include xl {
+			justify-content: space-between;
+		}
+	}
+
+	&__nav {
+		margin-right: 70px;
+
+		@include xl {
+			margin: 0;
+			margin-bottom: 60px;
+		}
+	}
+
+	&__logo {
+		margin-right: 45px;
+
+		@include xl {
+			margin: 0;
+		}
+
+		@include xs {
+			max-width: 91px;
+		}
+	}
+
+	&__contacts {
+		color: $color-text-primary;
+
+		@include xl {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__button {
+		margin-left: auto;
+		min-width: 177px;
+
+		svg {
+			display: none;
+			width: 20px;
+			height: 20px;
+		}
+
+		@include xl {
+			margin-left: 0;
+			padding: 9px 21px;
+			min-width: 0;
+			font-size: 0;
+
+			svg {
+				display: block;
+			}
+		}
+	}
+
+	&__adaptive {
+		display: flex;
+		align-items: center;
+		margin-right: 20px;
+
+		@include xl {
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 1000;
+			display: block;
+			overflow-y: auto;
+			margin: 0;
+			margin-top: 96px;
+			padding: 130px 30px;
+			width: 100%;
+			height: 100%;
+			min-height: 100vh;
+			background-color: $color-white;
+			transform: translateX(-150%);
+			transition: transform 0.3s;
+		}
+
+		@include xs {
+			margin-top: 65px;
+			padding: 86px 30px;
+		}
+
+		&_active {
+			transform: none;
+		}
+	}
+
+	&__close {
+		@include btn-reset;
+
+		position: absolute;
+		left: 15px;
+		top: 26px;
+		display: none;
+		width: 22px;
+		height: 22px;
+
+		svg {
+			width: 100%;
+			height: 100%;
+			fill: $color-primary;
+		}
+
+		@include xl {
+			display: block;
+		}
+	}
+
+	@include xl {
+		padding-top: 22px;
+		padding-bottom: 15px;
+	}
+
+	@include xs {
+		padding-top: 14px;
+		padding-bottom: 13px;
+	}
+}
+
+.nav {
+	&__list {
+		@include list-reset;
+
+		display: flex;
+
+		@include xl {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: 27px;
+
+			@include xl {
+				margin-right: 0;
+				margin-bottom: 27px;
+			}
+		}
+	}
+
+	&__link {
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 17px;
+		color: $color-text-primary;
+
+		&:hover {
+			color: $color-text-secondary;
+		}
+	}
+}
+
+.contacts {
+	&__top {
+		display: flex;
+		align-items: center;
+
+		@include xl {
+			flex-direction: column;
+		}
+	}
+
+	&__social {
+		margin-right: 15px;
+
+		@include xl {
+			margin: 0;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__social-link {
+		display: inline-block;
+		width: 18px;
+		height: 18px;
+
+		&:not(:last-child) {
+			margin-right: 14px;
+		}
+
+		svg {
+			display: block;
+			width: 100%;
+			height: 100%;
+			color: $color-white;
+			fill: $color-dove-gray;
+		}
+
+		&:hover {
+			svg {
+				fill: $color-text-secondary;
+			}
+		}
+	}
+
+	&__phone {
+		font-weight: 800;
+		font-size: 24px;
+		line-height: 29px;
+		color: inherit;
+
+		&:hover {
+			color: $color-text-secondary;
+		}
+
+		@include xl {
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 22px;
+			text-align: center;
+		}
+	}
+
+	&__schedule {
+		display: block;
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 15px;
+		text-align: right;
+
+		@include xl {
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 22px;
+			text-align: center;
+		}
+	}
+
+	&__email {
+		display: none;
+		color: inherit;
+
+		@include xl {
+			display: block;
+			margin-bottom: 30px;
+		}
+	}
+
+	@include xl {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 22px;
+		text-align: center;
+		color: $color-text-secondary;
+	}
+}
+
+.burger {
+	position: relative;
+	display: none;
+	margin-right: 21px;
+	border: none;
+	border-radius: 1px;
+	padding: 0;
+	width: 41px;
+	height: 20px;
+	color: $color-secondary;
+	background-color: transparent;
+	cursor: pointer;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		border-radius: inherit;
+		width: 100%;
+		height: 4px;
+		background-color: currentColor;
+		transition: 0.3s;
+	}
+
+	&::before {
+		top: 0;
+	}
+
+	&::after {
+		top: calc(100% - 4px);
+		width: 15px;
+	}
+
+	&__line {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		border-radius: inherit;
+		width: 27px;
+		height: 4px;
+		background-color: currentColor;
+		transform: translateY(-50%);
+		transition: transform 0.3s;
+	}
+
+	&_active {
+		&::after {
+			width: 100%;
+			color: $color-green;
+			transition: 0.3s;
+		}
+	}
+
+	@include xl {
+		display: block;
+	}
+}

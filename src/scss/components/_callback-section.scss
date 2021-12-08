@@ -1,0 +1,232 @@
+.callback-section {
+	padding: $section-padding;
+
+	&__container {
+		position: relative;
+		display: flex;
+		align-items: flex-start;
+		border-radius: 20px;
+		padding: 41px 98px 187px;
+		background: #f4f8ff;
+
+		@include xl {
+			flex-direction: column;
+			align-items: center;
+			padding: 68px 64px 220px;
+		}
+
+		@include sm {
+			padding: 40px 0 150px;
+		}
+	}
+
+	&__about {
+		margin-right: 50px;
+
+		@include xl {
+			margin-right: 0;
+			margin-bottom: 60px;
+			text-align: center;
+		}
+
+		@include sm {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__title {
+		@include font(24px, 36px, 29px, 60px);
+
+		margin: 0;
+		margin-right: 40px;
+		margin-bottom: 20px;
+		font-weight: 800;
+
+		@include xl {
+			margin-right: 0;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__text {
+		@include font-body-2;
+	}
+
+	&__paragraph {
+		margin: 0;
+
+		span {
+			font-weight: 600;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__form {
+		width: 472px;
+		min-width: calc(50% - 10px);
+
+		@include xl {
+			margin: 0 15px;
+		}
+
+		@include sm {
+			width: 100%;
+		}
+	}
+
+	&__image {
+		position: absolute;
+
+		&_1 {
+			left: 30%;
+			top: -70px;
+
+			@include lg {
+				left: 10%;
+			}
+
+			@include sm {
+				left: 0;
+				max-width: 120px;
+			}
+		}
+
+		&_2 {
+			right: -37px;
+			top: 240px;
+
+			@include lg {
+				top: 380px;
+			}
+
+			@include sm {
+				right: -20px;
+				top: -50px;
+				max-width: 103px;
+			}
+
+			@include xs {
+				//top: -100px;
+			}
+		}
+
+		&_3 {
+			left: 0;
+			bottom: 32px;
+
+			@include xl {
+				bottom: 0;
+				max-width: 340px;
+			}
+
+			@include sm {
+				max-width: 220px;
+			}
+		}
+
+		&_4 {
+			left: 44%;
+			bottom: 141px;
+
+			@include xl {
+				left: 5%;
+				bottom: 180px;
+			}
+
+			@include md {
+				left: -20px;
+				bottom: 230px;
+				max-width: 42px;
+			}
+		}
+
+		&_5 {
+			right: -11px;
+			bottom: -70px;
+
+			@include md {
+				bottom: 20px;
+				max-width: 120px;
+			}
+
+			@include sm {
+				bottom: 100px;
+				max-width: 91px;
+			}
+		}
+	}
+
+	@include md {
+		padding: $section-padding-mobile;
+	}
+}
+
+.callback-form {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	border-radius: 20px;
+	padding: 56px 63px 47px;
+	color: $color-white;
+	background-color: $color-secondary;
+
+	&__title {
+		@include font(18px, 24px, 22px, 30px);
+
+		margin: 0 auto;
+		margin-bottom: 28px;
+		text-align: center;
+	}
+
+	&__caption {
+		margin: 0;
+		margin-bottom: 46px;
+		text-align: center;
+	}
+
+	&__label {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 31px;
+		width: 100%;
+	}
+
+	&__input {
+		@include font-body-2;
+
+		outline: none;
+		border: none;
+		border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+		padding: 7px 0;
+		color: $color-white;
+		background-color: inherit;
+
+		&::placeholder {
+			color: rgba(255, 255, 255, 0.4);
+		}
+	}
+
+	&__button {
+		margin-bottom: 25px;
+		width: 100%;
+	}
+
+	@include sm {
+		padding: 37px 21px 46px;
+	}
+}
+
+.checkbox {
+	@include custom-checkbox;
+
+	&__content {
+		margin: 0;
+
+		span {
+			color: rgba(255, 255, 255, 0.4);
+		}
+	}
+}

@@ -1,0 +1,233 @@
+.footer {
+	padding-top: 125px;
+
+	&__wrapper {
+		padding: 75px 0 58px;
+		background-color: $color-primary;
+
+		@include md {
+			padding: 42px 35px 50px;
+		}
+
+		@include sm {
+			padding: 27px 0 48px;
+		}
+	}
+
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		color: $color-white;
+
+		@include sm {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+
+	&__email {
+		grid-column: span 5;
+		grid-row: 1;
+
+		@media (max-width: 870px) {
+			grid-column: span 6;
+		}
+
+		@include sm {
+			grid-column: span 4;
+		}
+	}
+
+	&__email-caption {
+		@include font-h1;
+
+		display: block;
+		margin-bottom: 30px;
+
+		@include md {
+			margin-bottom: 21px;
+		}
+
+		@include sm {
+			margin-bottom: 11px;
+		}
+	}
+
+	&__email-address {
+		@include font(20px, 48px, 24px, 59px);
+
+		font-weight: 700;
+		color: $color-text-secondary;
+
+		&:hover {
+			color: $color-hover-button;
+		}
+	}
+
+	&__button {
+		grid-column: span 5 / -1;
+		grid-row: 1;
+		margin-top: auto;
+		margin-left: auto;
+		width: 341px;
+
+		@media (max-width: 870px) {
+			grid-column: span 6 / -1;
+		}
+
+		@include md {
+			width: 100%;
+		}
+
+		@include sm {
+			grid-column: span 4;
+			grid-row: 3;
+			margin-bottom: 31px;
+			margin-left: 0;
+			max-width: 275px;
+		}
+	}
+
+	&__contacts {
+		grid-column: span 3;
+		grid-row: 3;
+
+		@include lg {
+			grid-column: span 4;
+		}
+
+		@include md {
+			grid-column: span 5;
+		}
+
+		@include sm {
+			grid-column: span 4;
+			grid-row: 5;
+		}
+	}
+
+	&__social {
+		grid-column: span 3 / -1;
+		grid-row: 3;
+		margin-left: auto;
+
+		@include md {
+			grid-column: span 5 / -1;
+		}
+
+		@include sm {
+			grid-column: span 4;
+			grid-row: 4;
+			margin-bottom: 46px;
+			margin-left: 0;
+		}
+	}
+
+	&__social-link {
+		display: inline-block;
+		width: 35px;
+		height: 35px;
+
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+
+		svg {
+			display: block;
+			width: 100%;
+			height: 100%;
+			color: $color-primary;
+			fill: $color-white;
+		}
+
+		&:hover {
+			svg {
+				fill: $color-text-secondary;
+			}
+		}
+	}
+
+	&__bottom {
+		grid-column: 1 / -1;
+		grid-row: auto;
+		margin: 0 auto;
+		text-align: center;
+
+		@include md {
+			margin-top: 37px;
+		}
+
+		@include sm {
+			margin-top: 30px;
+		}
+	}
+
+	&__logo {
+		display: block;
+		margin-bottom: 20px;
+
+		@include md {
+			margin-bottom: 30px;
+		}
+
+		@include sm {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__bottom-copyright {
+		margin-bottom: 16px;
+
+		@include sm {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__bottom-policy {
+		text-decoration: underline;
+		color: inherit;
+
+		&:hover {
+			color: $color-secondary;
+		}
+	}
+
+	&__line {
+		grid-column: 1 / -1;
+		grid-row: 2;
+		margin-top: 33px;
+		margin-bottom: 44px;
+		border: none;
+		border-bottom: 0.5px solid $color-secondary;
+		min-width: 100%;
+
+		@include md {
+			margin-top: 19px;
+			margin-bottom: 29px;
+		}
+
+		@include sm {
+			grid-column: span 4;
+			margin: 30px 0;
+		}
+	}
+}
+
+.contacts-footer {
+	&__item {
+		@include font(14px, 18px, 17px, 22px);
+
+		font-weight: 700;
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+
+			@include md {
+				margin-bottom: 34px;
+			}
+
+			@include sm {
+				margin-bottom: 26px;
+			}
+		}
+	}
+}

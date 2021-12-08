@@ -1,0 +1,42 @@
+@import "../vars";
+
+@mixin font($size-min: 16px, $size-max, $height-min: 120%, $height-max) {
+	font-size: responsive $size-min $size-max;
+	line-height: responsive $height-min $height-max;
+}
+
+@mixin font-h1 {
+	@include font(18px, 36px, 22px, 44px);
+
+	font-weight: 700;
+}
+
+@mixin font-h2 {
+	@include font(18px, 36px, 22px, 44px);
+
+	font-weight: 800;
+}
+
+@mixin font-h3 {
+	@include font(12px, 24px, 15px, 30px);
+
+	font-weight: 700;
+}
+
+@mixin font-button {
+	font-weight: 800;
+	font-size: 12px;
+	line-height: 15px;
+}
+
+@mixin font-body-1 {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 15px;
+}
+
+@mixin font-body-2 {
+	@include font(12px, 18px, 15px, 22px);
+
+	font-weight: 400;
+}

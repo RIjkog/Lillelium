@@ -1,0 +1,36 @@
+<div class="modal">
+	<div class="modal__container">
+		<div class="modal__body">
+			<button class="modal__close">
+				<svg>
+					<use xlink:href="img/sprite.svg#close"></use>
+				</svg>
+			</button>
+			<form action="#" class="modal__form consult-form">
+				<h2 class="consult-form__title">Заявка на консультацию</h2>
+				<label class="consult-form__label">
+					<span class="consult-form__caption">Ваше имя</span>
+					<input type="text" class="consult-form__input" placeholder="Введите ваше имя" name="name">
+				</label>
+				<label class="consult-form__label">
+					<span class="consult-form__caption">Номер телефона</span>
+					<input type="tel" class="consult-form__input" placeholder="+ 7 (999) 999 99 99" name="phone">
+				</label>
+				<button class="button button_primary consult-form__button" type="submit">Отправить</button>
+				<p class="consult-form__policy">
+					Нажимая на&nbsp;кнопку &laquo;Отправить заявку&raquo;, я&nbsp;даю согласие на&nbsp;обработку
+					персональных данных и&nbsp;соглашаюсь c&nbsp;политикой конфиденциальности
+				</p>
+				<div class="consult-form__bottom">
+					<span class="consult-form__bottom-decor">
+						<svg>
+							<use xlink:href="img/sprite.svg#lock"></use>
+						</svg>
+					</span>
+					<img src="img/magazine.png" alt="Журнал" class="consult-form__img">
+				</div>
+
+			</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,27 @@
+.devs {
+	padding: $section-padding;
+
+	&__bg {
+		padding-bottom: 39%;
+		background-image: url("../img/devs.jpg");
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		@include lg {
+			padding-bottom: 55%;
+		}
+
+		@include md {
+			padding-bottom: 60%;
+		}
+
+		@include sm {
+			padding-bottom: 75%;
+		}
+	}
+
+	@include md {
+		padding: $section-padding-mobile;
+	}
+}

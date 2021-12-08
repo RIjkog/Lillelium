@@ -1,0 +1,160 @@
+.modal {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 10000;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: rgba($color: #000, $alpha: 0.2);
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.3s;
+
+	&__container {
+		@include flex-center;
+
+		padding: 30px;
+		min-width: 100%;
+		min-height: 100%;
+
+		@include sm {
+			padding: 15px;
+		}
+	}
+
+	&__body {
+		position: relative;
+		border-radius: 10px;
+		padding: 27px 196px;
+		width: 766px;
+		background-color: $color-white;
+
+		@include lg {
+			padding: 27px 79px;
+			width: 532px;
+		}
+
+		@include sm {
+			padding: 27px 15px;
+			width: 100%;
+		}
+	}
+
+	&__close {
+		@include btn-reset;
+
+		position: absolute;
+		right: 17px;
+		top: 12px;
+		width: 12px;
+		height: 12px;
+
+		svg {
+			width: 100%;
+			height: 100%;
+			fill: #363636;
+		}
+	}
+
+	&_active {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&__form {
+	}
+}
+
+.consult-form {
+	display: flex;
+	flex-direction: column;
+
+	&__title {
+		@include font(18px, 20px, 22px, 24px);
+
+		margin: 0;
+		margin-bottom: 31px;
+		font-weight: 700;
+		text-align: center;
+	}
+
+	&__label {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 29px;
+		width: 100%;
+	}
+
+	&__caption {
+		display: block;
+		margin-bottom: 3px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		color: #7e7e7e;
+	}
+
+	&__input {
+		outline: none;
+		border: none;
+		border-bottom: 2px solid $color-violet;
+		padding: 10px 0;
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 15px;
+		color: $color-text-primary;
+
+		&::placeholder {
+			color: $color-violet;
+		}
+	}
+
+	&__button {
+		margin-bottom: 13px;
+	}
+
+	&__policy {
+		margin-bottom: 26px;
+		font-weight: 500;
+		font-size: 10px;
+		line-height: 12px;
+		color: $color-violet;
+	}
+
+	&__bottom {
+		@include flex-center;
+
+		position: relative;
+		margin: 0 auto;
+		border-radius: 10px;
+		padding: 10px;
+		width: 220px;
+		height: 102px;
+		background: linear-gradient(83.88deg, #6b5af9 -24.18%, #aea4fe 112.68%);
+	}
+
+	&__img {
+		display: block;
+		width: 120px;
+	}
+
+	&__bottom-decor {
+		@include flex-center;
+
+		position: absolute;
+		right: -7px;
+		top: -8px;
+		border: 3px solid $color-white;
+		border-radius: 50%;
+		width: 28px;
+		height: 28px;
+		background-color: #a6a6a6;
+
+		svg {
+			width: 11px;
+			height: 12px;
+		}
+	}
+}
